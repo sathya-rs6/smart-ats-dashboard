@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer RAG - AI-Powered Resume Analysis</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles.css">
+    <style>
+        /* Critical CSS for immediate loading */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #1f2937;
+        }
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem;
+        }
+        .section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-brain"></i>
+                <span>Resume Analyzer RAG</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#upload" class="nav-link active">Upload</a>
+                <a href="#analyze" class="nav-link">Analyze</a>
+                <a href="#chat" class="nav-link">Chat</a>
+                <a href="#results" class="nav-link">Results</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>AI-Powered Resume Analysis</h1>
+                <p>Upload your resume, define job requirements, and get intelligent insights powered by RAG technology</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>PDF Analysis</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-robot"></i>
+                        <span>AI Scoring</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-comments"></i>
+                        <span>RAG Chat</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <section id="upload" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-upload"></i> Upload Resume</h2>
+                <p>Drag and drop your resume or click to browse</p>
+            </div>
+            
+            <div class="upload-container">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Drop your resume here</h3>
+                        <p>Supports PDF, DOC, DOCX files up to 10MB</p>
+                        <button class="btn btn-primary" id="browseBtn">
+                            <i class="fas fa-folder-open"></i> Browse Files
+                        </button>
+                        <input type="file" id="fileInput" accept=".pdf,.doc,.docx" hidden>
+                    </div>
+                </div>
+                
+                <div class="upload-status" id="uploadStatus" style="display: none;">
+                    <div class="status-content">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Resume Uploaded Successfully!</h3>
+                        <p id="fileName"></p>
+                        <div class="upload-details">
+                            <span>Resume ID: <strong id="resumeId"></strong></span>
+                            <span>Status: <strong>Processed</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Description Section -->
+        <section id="job-desc" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-briefcase"></i> Job Description</h2>
+                <p>Define the job requirements for analysis</p>
+            </div>
+            
+            <div class="job-form-container">
+                <form id="jobForm" class="job-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="jobTitle">Job Title</label>
+                            <input type="text" id="jobTitle" placeholder="e.g., Senior Python Developer" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" placeholder="e.g., Tech Corp">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="e.g., Remote / San Francisco">
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Required Experience (years)</label>
+                            <input type="number" id="experience" placeholder="3" min="0" max="20">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Job Description</label>
+                        <textarea id="description" rows="4" placeholder="Describe the role and responsibilities..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="requirements">Requirements</label>
+                        <textarea id="requirements" rows="3" placeholder="List the key requirements..."></textarea>
+                    </div>
+                    
+                    <div class="skills-section">
+                        <div class="form-group">
+                            <label>Required Skills</label>
+                            <div class="skills-input">
+                                <input type="text" id="skillInput" placeholder="Type a skill and press Enter">
+                                <div class="skills-tags" id="skillsTags"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Preferred Skills</label>
+                            <div class="skills-input">
+                                <input type="text" id="preferredSkillInput" placeholder="Type a skill and press Enter">
+                                <div class="skills-tags" id="preferredSkillsTags"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-save"></i> Create Job Description
+                    </button>
+                </form>
+                
+                <div class="job-status" id="jobStatus" style="display: none;">
+                    <div class="status-content">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Job Description Created!</h3>
+                        <p>Job ID: <strong id="jobId"></strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analysis Section -->
+        <section id="analyze" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Resume Analysis</h2>
+                <p>Get AI-powered insights and scoring</p>
+            </div>
+            
+            <div class="analysis-container">
+                <div class="analysis-trigger">
+                    <button id="analyzeBtn" class="btn btn-primary btn-large" disabled>
+                        <i class="fas fa-magic"></i> Analyze Resume
+                    </button>
+                    <p class="analysis-note">Upload a resume and create a job description first</p>
+                </div>
+                
+                <div class="analysis-loading" id="analysisLoading" style="display: none;">
+                    <div class="loading-spinner"></div>
+                    <h3>Analyzing Resume...</h3>
+                    <p>This may take 30-60 seconds</p>
+                </div>
+                
+                <div class="analysis-results" id="analysisResults" style="display: none;">
+                    <div class="results-header">
+                        <h3>Analysis Complete!</h3>
+                        <div class="overall-score">
+                            <span class="score-label">Overall Match</span>
+                            <span class="score-value" id="overallScore">0%</span>
+                            <span class="score-level" id="scoreLevel">Low</span>
+                        </div>
+                    </div>
+                    
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <h4><i class="fas fa-code"></i> Skills Analysis</h4>
+                            <div class="score-chart">
+                                <canvas id="skillsChart"></canvas>
+                            </div>
+                            <div class="score-details">
+                                <div class="score-item">
+                                    <span>Skills Match</span>
+                                    <span id="skillScore">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <h4><i class="fas fa-user-tie"></i> Experience</h4>
+                            <div class="score-chart">
+                                <canvas id="experienceChart"></canvas>
+                            </div>
+                            <div class="score-details">
+                                <div class="score-item">
+                                    <span>Experience Match</span>
+                                    <span id="experienceScore">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+                            <div class="score-chart">
+                                <canvas id="educationChart"></canvas>
+                            </div>
+                            <div class="score-details">
+                                <div class="score-item">
+                                    <span>Education Match</span>
+                                    <span id="educationScore">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <h4><i class="fas fa-certificate"></i> Certifications</h4>
+                            <div class="score-chart">
+                                <canvas id="certificationChart"></canvas>
+                            </div>
+                            <div class="score-details">
+                                <div class="score-item">
+                                    <span>Certification Match</span>
+                                    <span id="certificationScore">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feedback-section">
+                        <div class="feedback-card strengths">
+                            <h4><i class="fas fa-thumbs-up"></i> Strengths</h4>
+                            <ul id="strengthsList"></ul>
+                        </div>
+                        
+                        <div class="feedback-card improvements">
+                            <h4><i class="fas fa-lightbulb"></i> Improvements</h4>
+                            <ul id="improvementsList"></ul>
+                        </div>
+                        
+                        <div class="feedback-card missing-skills">
+                            <h4><i class="fas fa-exclamation-triangle"></i> Missing Skills</h4>
+                            <div class="skills-tags" id="missingSkillsTags"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section id="chat" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-comments"></i> RAG Chat</h2>
+                <p>Ask questions about the resume using AI</p>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="chat-message bot">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hello! I'm your AI assistant. Upload a resume and I can answer any questions about it. Try asking:</p>
+                            <ul>
+                                <li>"What programming languages does the candidate know?"</li>
+                                <li>"Summarize their work experience"</li>
+                                <li>"What projects have they worked on?"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="Ask a question about the resume..." disabled>
+                        <button id="sendBtn" class="btn btn-primary" disabled>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="quick-questions">
+                        <button class="quick-btn" data-question="What skills does the candidate have?">Skills</button>
+                        <button class="quick-btn" data-question="What is their work experience?">Experience</button>
+                        <button class="quick-btn" data-question="What projects have they worked on?">Projects</button>
+                        <button class="quick-btn" data-question="What is their educational background?">Education</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="/frontend/app.js"></script>
+</body>
+</html>

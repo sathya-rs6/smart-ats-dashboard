@@ -1,0 +1,817 @@
+2025-10-10 19:13:50,856 - core.analyzer - ERROR - Failed to import required packages: No module named 'langchain_huggingface'
+2025-10-10 19:13:50,858 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-10 19:19:17,472 - core.parser - WARNING - Some parsing dependencies not available: No module named 'fitz'
+2025-10-10 19:23:29,455 - core.parser - WARNING - Some parsing dependencies not available: No module named 'pdfplumber'
+2025-10-10 19:23:33,478 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-10-10 19:25:14,322 - core.parser - WARNING - Some parsing dependencies not available: No module named 'spacy'
+2025-10-10 19:27:07,536 - core.parser - WARNING - Some parsing dependencies not available: No module named 'spacy'
+2025-10-10 19:27:34,423 - core.parser - WARNING - Some parsing dependencies not available: No module named 'spacy'
+2025-10-10 19:28:24,813 - core.parser - WARNING - Some parsing dependencies not available: No module named 'spacy'
+2025-10-10 19:40:41,387 - core.parser - WARNING - Some parsing dependencies not available: No module named 'spacy'
+2025-10-10 19:40:41,438 - core.parser - WARNING - Some parsing dependencies not available: No module named 'spacy'
+2025-10-10 19:40:49,510 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-10 19:40:49,511 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-10 19:40:49,520 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-10 19:40:49,521 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-10 20:02:59,448 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-10 20:02:59,449 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-10 20:02:59,450 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-10 20:02:59,451 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-10 20:03:08,739 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-10 20:03:08,744 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-10 20:03:08,802 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-10 20:03:08,803 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-10 20:03:13,248 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-10 20:03:13,251 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-10 20:03:27,051 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-10 20:03:27,173 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-11 22:45:57,737 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-11 22:45:57,739 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-11 22:45:57,752 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-11 22:45:57,754 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-11 22:46:53,826 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-11 22:46:53,827 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-11 22:47:15,610 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-11 22:47:15,612 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-11 22:48:00,412 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-11 22:48:01,344 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-11 22:48:43,494 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-11 22:48:43,495 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-11 22:55:29,667 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-11 22:55:31,235 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-11 22:55:55,609 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-11 22:55:56,864 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-11 22:56:35,067 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-11 22:56:35,069 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-11 22:57:16,052 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-11 22:57:17,225 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-11 22:57:37,319 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-11 22:57:38,408 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-11 22:57:56,544 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-11 22:57:57,717 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-11 23:04:19,595 - main - ERROR - Error creating job description: (sqlite3.OperationalError) table job_descriptions has no column named created_date
+[SQL: INSERT INTO job_descriptions (title, company, location, description, requirements, required_skills, preferred_skills, required_experience, required_education, required_certifications, created_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Senior Python Developer', 'Tech Corp', 'Remote', 'We are looking for an experienced Python developer to join our team', 'Strong Python skills, web development experience, database knowledge', '["Python", "Django", "PostgreSQL", "REST APIs", "Git"]', '["Docker", "AWS", "React"]', 3.0, '["Bachelor"]', '[]', '2025-10-11 17:34:19.594106')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-11 23:06:03,605 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-11 23:06:03,606 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-11 23:06:11,446 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-11 23:06:12,646 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-11 23:06:30,002 - main - ERROR - Error creating job description: (sqlite3.OperationalError) table job_descriptions has no column named created_date
+[SQL: INSERT INTO job_descriptions (title, company, location, description, requirements, required_skills, preferred_skills, required_experience, required_education, required_certifications, created_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Senior Python Developer', 'Tech Corp', 'Remote', 'We are looking for an experienced Python developer to join our team', 'Strong Python skills, web development experience, database knowledge', '["Python", "Django", "PostgreSQL", "REST APIs", "Git"]', '["Docker", "AWS", "React"]', 3.0, '["Bachelor"]', '[]', '2025-10-11 17:36:30.000255')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-11 23:12:51,056 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-11 23:12:51,057 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-11 23:13:02,451 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-11 23:13:03,803 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 11:59:46,400 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-12 11:59:46,401 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-12 12:00:54,431 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 12:01:11,948 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 12:05:13,591 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-12 12:05:13,591 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-12 12:05:23,586 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 12:05:25,382 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 12:08:21,556 - main - ERROR - Error analyzing resume: (sqlite3.OperationalError) no such column: job_descriptions.created_date
+[SQL: SELECT job_descriptions.id AS job_descriptions_id, job_descriptions.title AS job_descriptions_title, job_descriptions.company AS job_descriptions_company, job_descriptions.location AS job_descriptions_location, job_descriptions.description AS job_descriptions_description, job_descriptions.requirements AS job_descriptions_requirements, job_descriptions.required_skills AS job_descriptions_required_skills, job_descriptions.preferred_skills AS job_descriptions_preferred_skills, job_descriptions.required_experience AS job_descriptions_required_experience, job_descriptions.required_education AS job_descriptions_required_education, job_descriptions.required_certifications AS job_descriptions_required_certifications, job_descriptions.created_date AS job_descriptions_created_date 
+FROM job_descriptions 
+WHERE job_descriptions.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-12 12:09:18,449 - main - ERROR - Error analyzing resume: (sqlite3.OperationalError) no such column: job_descriptions.created_date
+[SQL: SELECT job_descriptions.id AS job_descriptions_id, job_descriptions.title AS job_descriptions_title, job_descriptions.company AS job_descriptions_company, job_descriptions.location AS job_descriptions_location, job_descriptions.description AS job_descriptions_description, job_descriptions.requirements AS job_descriptions_requirements, job_descriptions.required_skills AS job_descriptions_required_skills, job_descriptions.preferred_skills AS job_descriptions_preferred_skills, job_descriptions.required_experience AS job_descriptions_required_experience, job_descriptions.required_education AS job_descriptions_required_education, job_descriptions.required_certifications AS job_descriptions_required_certifications, job_descriptions.created_date AS job_descriptions_created_date 
+FROM job_descriptions 
+WHERE job_descriptions.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-12 12:10:09,204 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-12 12:10:09,205 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-12 12:10:15,833 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 12:10:17,021 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 12:11:16,752 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 12:11:16,752 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 12:11:26,538 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-10-12 12:11:48,110 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-10-12 12:21:38,823 - core.analyzer - ERROR - Failed to initialize embeddings: ('Connection broken: IncompleteRead(429564166 bytes read, 8407706 more expected)', IncompleteRead(429564166 bytes read, 8407706 more expected))
+2025-10-12 12:21:38,827 - main - ERROR - Error analyzing resume: ('Connection broken: IncompleteRead(429564166 bytes read, 8407706 more expected)', IncompleteRead(429564166 bytes read, 8407706 more expected))
+2025-10-12 12:22:23,546 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-12 12:22:23,547 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-12 12:22:33,546 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 12:22:35,542 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 12:22:40,848 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 12:22:40,848 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 12:22:44,683 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-10-12 12:23:06,159 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 12:23:08,929 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 12:23:08,931 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 12:23:08,931 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 12:23:43,430 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 12:23:43,431 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 12:23:49,713 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 12:23:52,788 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 12:23:52,790 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 12:23:52,790 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 12:23:52,791 - main - ERROR - Error analyzing resume: 'JobDescription' object has no attribute 'dict'
+2025-10-12 12:24:45,593 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-12 12:24:45,594 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-12 12:24:52,390 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 12:24:53,478 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 12:25:37,765 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 12:25:37,767 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 12:25:44,878 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 12:25:48,039 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 12:25:48,040 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 12:25:48,041 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 12:25:48,042 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 12:25:48,342 - core.analyzer - ERROR - Failed to load and process resume: `pypdf` package not found, please install it with `pip install pypdf`
+2025-10-12 12:25:48,345 - main - ERROR - Error analyzing resume: `pypdf` package not found, please install it with `pip install pypdf`
+2025-10-12 12:28:36,960 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 12:28:36,961 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 12:28:44,480 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 12:28:47,202 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 12:28:47,205 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 12:28:47,206 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 12:28:47,207 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 12:28:48,682 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 12:28:48,685 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 12:28:48,687 - main - ERROR - Error analyzing resume: 'ResumeAnalyzer' object has no attribute 'docs'
+2025-10-12 12:29:51,317 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-12 12:29:51,318 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-12 12:30:00,479 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 12:30:01,917 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-12 12:30:01,918 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-12 12:30:02,127 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 12:30:11,785 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 12:30:12,742 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 12:30:30,354 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 12:30:30,355 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 12:30:37,990 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 12:30:41,203 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 12:30:41,205 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 12:30:41,206 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 12:30:41,209 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 12:30:42,036 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 12:30:42,039 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 12:30:42,905 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-12 12:30:46,140 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 12:30:46,144 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 12:30:46,145 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 12:30:46,478 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 12:30:46,481 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 12:30:48,508 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 12:30:48,510 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 12:30:48,510 - core.analyzer - INFO - Processing question: Extract all personal information including name, contact details, and location
+2025-10-12 12:30:51,349 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:30:51,894 - core.analyzer - INFO - Answered: Extract all personal information including name, c...
+2025-10-12 12:30:51,895 - core.analyzer - INFO - Processing question: What is the candidate's educational background?
+2025-10-12 12:30:52,515 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:30:52,525 - core.analyzer - INFO - Answered: What is the candidate's educational background?...
+2025-10-12 12:30:52,526 - core.analyzer - INFO - Processing question: List all work experience with company names, positions, and dates
+2025-10-12 12:30:53,237 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:30:53,242 - core.analyzer - INFO - Answered: List all work experience with company names, posit...
+2025-10-12 12:30:53,244 - core.analyzer - INFO - Processing question: What technical skills does the candidate have?
+2025-10-12 12:30:53,568 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:30:53,570 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2025-10-12 12:30:58,810 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:30:58,815 - core.analyzer - INFO - Answered: What technical skills does the candidate have?...
+2025-10-12 12:30:58,816 - core.analyzer - INFO - Processing question: List all projects the candidate has worked on
+2025-10-12 12:30:59,139 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:30:59,141 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 16.000000 seconds
+2025-10-12 12:31:15,920 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:31:15,927 - core.analyzer - INFO - Answered: List all projects the candidate has worked on...
+2025-10-12 12:31:15,927 - core.analyzer - INFO - Processing question: What certifications does the candidate hold?
+2025-10-12 12:31:16,258 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:31:16,259 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+2025-10-12 12:31:34,677 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:31:34,680 - core.analyzer - INFO - Answered: What certifications does the candidate hold?...
+2025-10-12 12:31:34,681 - core.analyzer - INFO - Processing question: Summarize the candidate's professional summary or objective
+2025-10-12 12:31:35,010 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:31:35,012 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 15.000000 seconds
+2025-10-12 12:31:50,735 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:31:50,743 - core.analyzer - INFO - Answered: Summarize the candidate's professional summary or ...
+2025-10-12 12:31:50,745 - core.analyzer - INFO - Processing question: Rate this resume on a scale of 1-100 based on clarity, completeness, and professional presentation
+2025-10-12 12:31:51,138 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:31:51,140 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 15.000000 seconds
+2025-10-12 12:32:07,278 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:32:07,288 - core.analyzer - INFO - Answered: Rate this resume on a scale of 1-100 based on clar...
+2025-10-12 12:32:07,305 - main - ERROR - Error analyzing resume: 'ScoreBreakdown' object has no attribute 'score_breakdown'
+2025-10-12 12:33:15,941 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-12 12:33:15,942 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-12 12:33:24,188 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 12:33:25,235 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 12:33:48,424 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 12:33:48,425 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 12:33:56,228 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 12:33:59,378 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 12:33:59,379 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 12:33:59,381 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 12:33:59,383 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 12:34:00,278 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 12:34:00,281 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 12:34:00,424 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-12 12:34:03,122 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 12:34:03,124 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 12:34:03,125 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 12:34:03,413 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 12:34:03,414 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 12:34:05,669 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 12:34:05,671 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 12:34:05,671 - core.analyzer - INFO - Processing question: Extract all personal information including name, contact details, and location
+2025-10-12 12:34:06,850 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:34:07,326 - core.analyzer - INFO - Answered: Extract all personal information including name, c...
+2025-10-12 12:34:07,326 - core.analyzer - INFO - Processing question: What is the candidate's educational background?
+2025-10-12 12:34:08,172 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:34:08,176 - core.analyzer - INFO - Answered: What is the candidate's educational background?...
+2025-10-12 12:34:08,177 - core.analyzer - INFO - Processing question: List all work experience with company names, positions, and dates
+2025-10-12 12:34:09,432 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:34:09,557 - core.analyzer - INFO - Answered: List all work experience with company names, posit...
+2025-10-12 12:34:09,560 - core.analyzer - INFO - Processing question: What technical skills does the candidate have?
+2025-10-12 12:34:09,884 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:34:09,888 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2025-10-12 12:34:14,932 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:34:14,938 - core.analyzer - INFO - Answered: What technical skills does the candidate have?...
+2025-10-12 12:34:14,939 - core.analyzer - INFO - Processing question: List all projects the candidate has worked on
+2025-10-12 12:34:15,394 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:34:15,395 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 19.000000 seconds
+2025-10-12 12:34:35,333 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:34:35,340 - core.analyzer - INFO - Answered: List all projects the candidate has worked on...
+2025-10-12 12:34:35,340 - core.analyzer - INFO - Processing question: What certifications does the candidate hold?
+2025-10-12 12:34:35,819 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:34:35,819 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 19.000000 seconds
+2025-10-12 12:34:56,187 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:34:56,194 - core.analyzer - INFO - Answered: What certifications does the candidate hold?...
+2025-10-12 12:34:56,195 - core.analyzer - INFO - Processing question: Summarize the candidate's professional summary or objective
+2025-10-12 12:34:56,543 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:34:56,544 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 17.000000 seconds
+2025-10-12 12:35:16,369 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:35:16,374 - core.analyzer - INFO - Answered: Summarize the candidate's professional summary or ...
+2025-10-12 12:35:16,375 - core.analyzer - INFO - Processing question: Rate this resume on a scale of 1-100 based on clarity, completeness, and professional presentation
+2025-10-12 12:35:16,740 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:35:16,742 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 10.000000 seconds
+2025-10-12 12:35:27,578 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:35:27,581 - core.analyzer - INFO - Answered: Rate this resume on a scale of 1-100 based on clar...
+2025-10-12 12:35:27,600 - main - ERROR - Error analyzing resume: (sqlite3.OperationalError) table resume_analyses has no column named analysis_date
+[SQL: INSERT INTO resume_analyses (resume_id, job_description_id, overall_score, skill_score, experience_score, education_score, certification_score, keyword_score, match_level, missing_skills, missing_keywords, feedback, analysis_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (1, 1, 22.3, 27.999999999999996, 0.0, 0.0, 100.0, 25.0, 'low', '["postgresql", "django", "rest apis"]', '[]', '{"overall_score": 22.3, "match_level": "low", "strengths": ["All required certifications present"], "improvements": ["Consider adding experience with ... (142 characters truncated) ... gresql", "django", "rest apis"], "score_breakdown": {"skills": 28.0, "experience": 0.0, "education": 0.0, "certifications": 100.0, "keywords": 25.0}}', '2025-10-12 07:05:27.595343')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-12 12:36:10,736 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-12 12:36:10,737 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-12 12:36:19,107 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 12:36:20,268 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 12:36:42,392 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 12:36:42,392 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 12:36:52,556 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 12:36:55,075 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 12:36:55,079 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 12:36:55,079 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 12:36:55,081 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 12:36:56,017 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 12:36:56,018 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 12:36:56,140 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-12 12:36:58,921 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 12:36:58,922 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 12:36:58,925 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 12:36:59,218 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 12:36:59,222 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 12:37:01,389 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 12:37:01,391 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 12:37:01,392 - core.analyzer - INFO - Processing question: Extract all personal information including name, contact details, and location
+2025-10-12 12:37:02,711 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:37:03,231 - core.analyzer - INFO - Answered: Extract all personal information including name, c...
+2025-10-12 12:37:03,232 - core.analyzer - INFO - Processing question: What is the candidate's educational background?
+2025-10-12 12:37:03,920 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:37:03,925 - core.analyzer - INFO - Answered: What is the candidate's educational background?...
+2025-10-12 12:37:03,926 - core.analyzer - INFO - Processing question: List all work experience with company names, positions, and dates
+2025-10-12 12:37:04,654 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:37:04,659 - core.analyzer - INFO - Answered: List all work experience with company names, posit...
+2025-10-12 12:37:04,660 - core.analyzer - INFO - Processing question: What technical skills does the candidate have?
+2025-10-12 12:37:04,969 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:37:04,975 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+2025-10-12 12:37:10,459 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:37:10,463 - core.analyzer - INFO - Answered: What technical skills does the candidate have?...
+2025-10-12 12:37:10,463 - core.analyzer - INFO - Processing question: List all projects the candidate has worked on
+2025-10-12 12:37:10,801 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:37:10,805 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 20.000000 seconds
+2025-10-12 12:37:31,838 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:37:31,844 - core.analyzer - INFO - Answered: List all projects the candidate has worked on...
+2025-10-12 12:37:31,845 - core.analyzer - INFO - Processing question: What certifications does the candidate hold?
+2025-10-12 12:37:32,189 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:37:32,191 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+2025-10-12 12:37:51,498 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:37:51,505 - core.analyzer - INFO - Answered: What certifications does the candidate hold?...
+2025-10-12 12:37:51,506 - core.analyzer - INFO - Processing question: Summarize the candidate's professional summary or objective
+2025-10-12 12:37:53,023 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:37:53,025 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+2025-10-12 12:38:11,864 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:38:11,872 - core.analyzer - INFO - Answered: Summarize the candidate's professional summary or ...
+2025-10-12 12:38:11,873 - core.analyzer - INFO - Processing question: Rate this resume on a scale of 1-100 based on clarity, completeness, and professional presentation
+2025-10-12 12:38:12,791 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 12:38:12,793 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 11.000000 seconds
+2025-10-12 12:38:24,873 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:38:24,878 - core.analyzer - INFO - Answered: Rate this resume on a scale of 1-100 based on clar...
+2025-10-12 12:40:18,563 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 12:40:18,564 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 12:40:22,995 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 12:40:24,942 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 12:40:24,944 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 12:40:24,945 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 12:40:24,945 - core.analyzer - ERROR - Failed to answer question: QA chain not initialized. Call create_qa_chain() first.
+2025-10-12 12:41:17,370 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-12 12:41:17,371 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-12 12:41:24,154 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 12:41:25,163 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 12:49:05,143 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 12:49:05,143 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 12:49:10,549 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 12:49:11,402 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 12:49:11,403 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 12:49:11,403 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 12:49:11,404 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 12:49:11,609 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 12:49:11,610 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 12:49:11,657 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-12 12:49:13,125 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 12:49:13,126 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 12:49:13,127 - core.analyzer - INFO - Processing question: What machine learning projects has Sathya worked on?
+2025-10-12 12:49:14,063 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 12:56:29,388 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-12 12:56:29,388 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-12 12:56:35,656 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 12:56:37,022 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 12:56:48,597 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-10-12 12:56:48,598 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-10-12 12:56:55,039 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 12:56:55,934 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 20:48:39,637 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-12 20:48:57,459 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-12 22:45:29,795 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 22:45:29,796 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 22:45:36,790 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 22:45:39,697 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 22:45:39,698 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 22:45:39,698 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 22:45:39,699 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 22:45:41,181 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 22:45:41,182 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 22:45:42,056 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-12 22:45:45,192 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 22:45:45,196 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 22:45:45,197 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 22:45:45,263 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 22:45:45,264 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 22:45:46,324 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 22:45:46,325 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 22:45:46,325 - core.analyzer - INFO - Processing question: Extract all personal information including name, contact details, and location
+2025-10-12 22:45:47,620 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 22:45:47,642 - core.analyzer - INFO - Answered: Extract all personal information including name, c...
+2025-10-12 22:45:47,642 - core.analyzer - INFO - Processing question: What is the candidate's educational background?
+2025-10-12 22:45:48,460 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 22:45:48,464 - core.analyzer - INFO - Answered: What is the candidate's educational background?...
+2025-10-12 22:45:48,465 - core.analyzer - INFO - Processing question: List all work experience with company names, positions, and dates
+2025-10-12 22:45:49,288 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 22:45:49,291 - core.analyzer - INFO - Answered: List all work experience with company names, posit...
+2025-10-12 22:45:49,292 - core.analyzer - INFO - Processing question: What technical skills does the candidate have?
+2025-10-12 22:45:49,602 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 22:45:49,604 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+2025-10-12 22:45:55,570 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 22:45:55,574 - core.analyzer - INFO - Answered: What technical skills does the candidate have?...
+2025-10-12 22:45:55,575 - core.analyzer - INFO - Processing question: List all projects the candidate has worked on
+2025-10-12 22:45:55,917 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 22:45:55,919 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 19.000000 seconds
+2025-10-12 22:46:15,538 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 22:46:15,541 - core.analyzer - INFO - Answered: List all projects the candidate has worked on...
+2025-10-12 22:46:15,542 - core.analyzer - INFO - Processing question: What certifications does the candidate hold?
+2025-10-12 22:46:15,910 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 22:46:15,912 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 19.000000 seconds
+2025-10-12 22:46:35,449 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 22:46:35,453 - core.analyzer - INFO - Answered: What certifications does the candidate hold?...
+2025-10-12 22:46:35,454 - core.analyzer - INFO - Processing question: Summarize the candidate's professional summary or objective
+2025-10-12 22:46:35,842 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 22:46:35,845 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+2025-10-12 22:46:54,583 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 22:46:54,586 - core.analyzer - INFO - Answered: Summarize the candidate's professional summary or ...
+2025-10-12 22:46:54,587 - core.analyzer - INFO - Processing question: Rate this resume on a scale of 1-100 based on clarity, completeness, and professional presentation
+2025-10-12 22:46:54,878 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-12 22:46:54,880 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2025-10-12 22:47:08,843 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 22:47:08,852 - core.analyzer - INFO - Answered: Rate this resume on a scale of 1-100 based on clar...
+2025-10-12 22:48:14,394 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 22:48:14,395 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 22:48:18,934 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 22:48:19,538 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 22:48:19,539 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 22:48:19,540 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 22:48:19,540 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 22:48:19,607 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 22:48:19,608 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 22:48:20,863 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 22:48:20,864 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 22:48:20,865 - core.analyzer - INFO - Processing question: is sathya have required skills?
+2025-10-12 22:48:21,687 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 22:48:25,941 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 22:48:25,942 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 22:48:30,112 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 22:48:30,896 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 22:48:30,896 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 22:48:30,897 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 22:48:30,897 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 22:48:30,968 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 22:48:30,969 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 22:48:32,158 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 22:48:32,160 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 22:48:32,161 - core.analyzer - INFO - Processing question: What is their work experience?
+2025-10-12 22:48:32,944 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 22:48:37,532 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 22:48:37,532 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 22:48:41,807 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 22:48:42,604 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 22:48:42,604 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 22:48:42,604 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 22:48:42,605 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 22:48:42,683 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 22:48:42,684 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 22:48:43,909 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 22:48:43,911 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 22:48:43,911 - core.analyzer - INFO - Processing question: What projects have they worked on?
+2025-10-12 22:48:44,523 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-12 22:49:47,055 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-12 22:49:47,057 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-12 22:49:52,200 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-12 22:49:53,322 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-12 22:49:53,322 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-12 22:49:53,323 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-12 22:49:53,323 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2025-10-12 22:49:53,535 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-12 22:49:53,537 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-12 22:49:55,353 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-12 22:49:55,354 - core.analyzer - INFO - QA chain created successfully
+2025-10-12 22:49:55,355 - core.analyzer - INFO - Processing question: What is their educational background?
+2025-10-12 22:49:56,061 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-13 09:44:51,366 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-13 09:44:57,121 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-13 09:45:22,181 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-13 09:45:22,945 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-10-13 09:49:00,307 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-13 09:49:00,309 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-13 09:49:08,400 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-13 09:49:11,122 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-13 09:49:11,125 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-13 09:49:11,125 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-13 09:49:11,127 - core.analyzer - INFO - Loading resume from: uploads\resumes\sathya r s .pdf
+2025-10-13 09:49:12,374 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-13 09:49:12,377 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-13 09:49:12,523 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-13 09:49:18,164 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-13 09:49:18,168 - core.analyzer - INFO - QA chain created successfully
+2025-10-13 09:49:18,169 - core.analyzer - INFO - Loading resume from: uploads\resumes\sathya r s .pdf
+2025-10-13 09:49:18,452 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-13 09:49:18,453 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-13 09:49:20,376 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-13 09:49:20,378 - core.analyzer - INFO - QA chain created successfully
+2025-10-13 09:49:20,379 - core.analyzer - INFO - Processing question: Extract all personal information including name, contact details, and location
+2025-10-13 09:49:22,440 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-13 09:49:22,482 - core.analyzer - INFO - Answered: Extract all personal information including name, c...
+2025-10-13 09:49:22,483 - core.analyzer - INFO - Processing question: What is the candidate's educational background?
+2025-10-13 09:49:23,171 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-13 09:49:23,177 - core.analyzer - INFO - Answered: What is the candidate's educational background?...
+2025-10-13 09:49:23,179 - core.analyzer - INFO - Processing question: List all work experience with company names, positions, and dates
+2025-10-13 09:49:24,036 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-13 09:49:24,048 - core.analyzer - INFO - Answered: List all work experience with company names, posit...
+2025-10-13 09:49:24,052 - core.analyzer - INFO - Processing question: What technical skills does the candidate have?
+2025-10-13 09:49:24,395 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-13 09:49:24,397 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+2025-10-13 09:49:31,007 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-13 09:49:31,019 - core.analyzer - INFO - Answered: What technical skills does the candidate have?...
+2025-10-13 09:49:31,025 - core.analyzer - INFO - Processing question: List all projects the candidate has worked on
+2025-10-13 09:49:31,432 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-13 09:49:31,434 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 19.000000 seconds
+2025-10-13 09:49:51,031 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-13 09:49:51,034 - core.analyzer - INFO - Answered: List all projects the candidate has worked on...
+2025-10-13 09:49:51,036 - core.analyzer - INFO - Processing question: What certifications does the candidate hold?
+2025-10-13 09:49:51,378 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-13 09:49:51,380 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 19.000000 seconds
+2025-10-13 09:50:10,801 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-13 09:50:10,805 - core.analyzer - INFO - Answered: What certifications does the candidate hold?...
+2025-10-13 09:50:10,807 - core.analyzer - INFO - Processing question: Summarize the candidate's professional summary or objective
+2025-10-13 09:50:11,144 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-13 09:50:11,145 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+2025-10-13 09:50:29,904 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-13 09:50:29,910 - core.analyzer - INFO - Answered: Summarize the candidate's professional summary or ...
+2025-10-13 09:50:29,910 - core.analyzer - INFO - Processing question: Rate this resume on a scale of 1-100 based on clarity, completeness, and professional presentation
+2025-10-13 09:50:30,312 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-10-13 09:50:30,313 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 12.000000 seconds
+2025-10-13 09:50:43,227 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-13 09:50:43,231 - core.analyzer - INFO - Answered: Rate this resume on a scale of 1-100 based on clar...
+2025-10-13 09:51:57,353 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-13 09:51:57,353 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-10-13 09:52:02,996 - core.analyzer - INFO - Embeddings model initialized successfully
+2025-10-13 09:52:05,082 - core.analyzer - INFO - LLM (groq) initialized successfully
+2025-10-13 09:52:05,084 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2025-10-13 09:52:05,085 - core.analyzer - INFO - Vector store (chroma) initialized
+2025-10-13 09:52:05,086 - core.analyzer - INFO - Loading resume from: uploads\resumes\sathya r s .pdf
+2025-10-13 09:52:05,372 - core.analyzer - INFO - Loaded 1 pages from resume
+2025-10-13 09:52:05,374 - core.analyzer - INFO - Created 3 chunks from resume
+2025-10-13 09:52:07,308 - core.analyzer - INFO - Vector store and retriever created successfully
+2025-10-13 09:52:07,309 - core.analyzer - INFO - QA chain created successfully
+2025-10-13 09:52:07,309 - core.analyzer - INFO - Processing question: is the candidate is eligible for job?
+2025-10-13 09:52:08,579 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-13 10:01:17,806 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2025-10-13 10:01:19,411 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2025-12-12 06:17:31,707 - core.analyzer - ERROR - Failed to import required packages: No module named 'chromadb'
+2025-12-12 06:17:31,708 - core.analyzer - INFO - Please run: pip install -r requirements.txt
+2025-12-12 06:21:45,306 - core.parser - WARNING - Some parsing dependencies not available: No module named 'pdfplumber'
+2026-03-10 20:56:50,476 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2026-03-10 20:57:03,883 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2026-03-10 20:59:27,655 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-03-10 20:59:27,656 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2026-03-10 20:59:36,136 - core.analyzer - INFO - Embeddings model initialized successfully
+2026-03-10 20:59:39,201 - core.analyzer - INFO - LLM (groq) initialized successfully
+2026-03-10 20:59:39,202 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2026-03-10 20:59:39,203 - core.analyzer - INFO - Vector store (chroma) initialized
+2026-03-10 20:59:39,203 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA R S resume.pdf.pdf
+2026-03-10 20:59:40,389 - core.analyzer - INFO - Loaded 1 pages from resume
+2026-03-10 20:59:40,390 - core.analyzer - INFO - Created 8 chunks from resume
+2026-03-10 20:59:41,081 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-03-10 20:59:48,384 - core.analyzer - INFO - Vector store and retriever created successfully
+2026-03-10 20:59:48,386 - core.analyzer - INFO - QA chain created successfully
+2026-03-10 20:59:48,387 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA R S resume.pdf.pdf
+2026-03-10 20:59:48,528 - core.analyzer - INFO - Loaded 1 pages from resume
+2026-03-10 20:59:48,529 - core.analyzer - INFO - Created 8 chunks from resume
+2026-03-10 20:59:52,139 - core.analyzer - INFO - Vector store and retriever created successfully
+2026-03-10 20:59:52,141 - core.analyzer - INFO - QA chain created successfully
+2026-03-10 20:59:52,141 - core.analyzer - INFO - Processing question: Extract all personal information including name, contact details, and location
+2026-03-10 20:59:54,726 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 20:59:54,748 - core.analyzer - INFO - Answered: Extract all personal information including name, c...
+2026-03-10 20:59:54,749 - core.analyzer - INFO - Processing question: What is the candidate's educational background?
+2026-03-10 20:59:55,692 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 20:59:55,696 - core.analyzer - INFO - Answered: What is the candidate's educational background?...
+2026-03-10 20:59:55,697 - core.analyzer - INFO - Processing question: List all work experience with company names, positions, and dates
+2026-03-10 20:59:56,322 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 20:59:56,324 - core.analyzer - INFO - Answered: List all work experience with company names, posit...
+2026-03-10 20:59:56,325 - core.analyzer - INFO - Processing question: What technical skills does the candidate have?
+2026-03-10 20:59:56,598 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-10 20:59:56,599 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 12.000000 seconds
+2026-03-10 21:00:09,142 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 21:00:09,145 - core.analyzer - INFO - Answered: What technical skills does the candidate have?...
+2026-03-10 21:00:09,146 - core.analyzer - INFO - Processing question: List all projects the candidate has worked on
+2026-03-10 21:00:09,345 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-10 21:00:09,348 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 23.000000 seconds
+2026-03-10 21:00:33,216 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 21:00:33,219 - core.analyzer - INFO - Answered: List all projects the candidate has worked on...
+2026-03-10 21:00:33,220 - core.analyzer - INFO - Processing question: What certifications does the candidate hold?
+2026-03-10 21:00:33,453 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-10 21:00:33,455 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 23.000000 seconds
+2026-03-10 21:00:57,163 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 21:00:57,165 - core.analyzer - INFO - Answered: What certifications does the candidate hold?...
+2026-03-10 21:00:57,166 - core.analyzer - INFO - Processing question: Summarize the candidate's professional summary or objective
+2026-03-10 21:00:57,440 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-10 21:00:57,442 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+2026-03-10 21:01:15,990 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 21:01:15,994 - core.analyzer - INFO - Answered: Summarize the candidate's professional summary or ...
+2026-03-10 21:01:15,994 - core.analyzer - INFO - Processing question: Rate this resume on a scale of 1-100 based on clarity, completeness, and professional presentation
+2026-03-10 21:01:16,240 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-10 21:01:16,241 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2026-03-10 21:01:30,028 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 21:01:30,032 - core.analyzer - INFO - Answered: Rate this resume on a scale of 1-100 based on clar...
+2026-03-10 21:01:47,630 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-03-10 21:01:47,630 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2026-03-10 21:01:55,423 - core.analyzer - INFO - Embeddings model initialized successfully
+2026-03-10 21:01:57,208 - core.analyzer - INFO - LLM (groq) initialized successfully
+2026-03-10 21:01:57,211 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2026-03-10 21:01:57,217 - core.analyzer - INFO - Vector store (chroma) initialized
+2026-03-10 21:01:57,218 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA R S resume.pdf.pdf
+2026-03-10 21:01:57,589 - core.analyzer - INFO - Loaded 1 pages from resume
+2026-03-10 21:01:57,591 - core.analyzer - INFO - Created 8 chunks from resume
+2026-03-10 21:02:03,272 - core.analyzer - INFO - Vector store and retriever created successfully
+2026-03-10 21:02:03,273 - core.analyzer - INFO - QA chain created successfully
+2026-03-10 21:02:03,274 - core.analyzer - INFO - Processing question: What is their work experience?
+2026-03-10 21:02:07,363 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 21:04:12,547 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2026-03-10 21:04:14,431 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2026-03-10 21:05:03,554 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2026-03-10 21:05:04,589 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2026-03-10 21:05:46,775 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2026-03-10 21:05:47,787 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2026-03-10 21:06:17,815 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-03-10 21:06:17,817 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2026-03-10 21:06:24,808 - core.analyzer - INFO - Embeddings model initialized successfully
+2026-03-10 21:06:25,620 - core.analyzer - INFO - LLM (groq) initialized successfully
+2026-03-10 21:06:25,621 - core.analyzer - INFO - ChromaDB directory: vector_stores\chroma_db
+2026-03-10 21:06:25,621 - core.analyzer - INFO - Vector store (chroma) initialized
+2026-03-10 21:06:25,622 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2026-03-10 21:06:25,858 - core.analyzer - INFO - Loaded 1 pages from resume
+2026-03-10 21:06:25,859 - core.analyzer - INFO - Created 3 chunks from resume
+2026-03-10 21:06:25,933 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-03-10 21:06:29,077 - core.analyzer - INFO - Vector store and retriever created successfully
+2026-03-10 21:06:29,080 - core.analyzer - INFO - QA chain created successfully
+2026-03-10 21:06:29,081 - core.analyzer - INFO - Loading resume from: uploads\resumes\SATHYA_update_resume.pdf
+2026-03-10 21:06:29,377 - core.analyzer - INFO - Loaded 1 pages from resume
+2026-03-10 21:06:29,378 - core.analyzer - INFO - Created 3 chunks from resume
+2026-03-10 21:06:30,683 - core.analyzer - INFO - Vector store and retriever created successfully
+2026-03-10 21:06:30,684 - core.analyzer - INFO - QA chain created successfully
+2026-03-10 21:06:30,684 - core.analyzer - INFO - Executing single batch prompt for comprehensive analysis...
+2026-03-10 21:06:30,685 - core.analyzer - INFO - Processing question: Extract and summarize the following information from the resume. You MUST return the output ONLY as a valid JSON object with the exact keys below. Do not include markdown blocks, just the raw JSON.
+
+Keys to include:
+- 'Extract all personal information including name, contact details, and location': (string value)
+- 'What is the candidate\'s educational background?': (string value)
+- 'List all work experience with company names, positions, and dates': (string value)
+- 'What technical skills does the candidate have?': (string value)
+- 'List all projects the candidate has worked on': (string value)
+- 'What certifications does the candidate hold?': (string value)
+- 'Summarize the candidate\'s professional summary or objective': (string value)
+- 'Rate this resume on a scale of 1-100 based on clarity, completeness, and professional presentation': (string value)
+2026-03-10 21:06:33,798 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 21:23:49,119 - core.parser - WARNING - Some parsing dependencies not available: No module named 'pdfplumber'
+2026-03-10 21:27:10,541 - core.parser - WARNING - Some parsing dependencies not available: No module named 'pdfplumber'
+2026-03-10 21:28:25,174 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2026-03-10 21:29:31,555 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2026-03-10 21:29:32,795 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2026-03-10 21:29:38,835 - core.parser - WARNING - Some parsing dependencies not available: No module named 'nltk'
+2026-03-10 21:29:39,633 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2026-03-10 21:29:39,710 - models.database - INFO - Database initialized successfully: sqlite:///./models/resume_analyzer.db
+2026-03-10 21:29:39,761 - watchfiles.main - INFO - 5 changes detected
+2026-03-10 21:29:40,177 - watchfiles.main - INFO - 2 changes detected
+2026-03-10 21:29:40,529 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:40,886 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:41,245 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:41,601 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:41,959 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:42,320 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:42,727 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:43,133 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:43,540 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:43,907 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:44,314 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:44,719 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:45,124 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:45,529 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:45,935 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:46,338 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:46,754 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:47,157 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:47,564 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:47,968 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:48,374 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:48,779 - watchfiles.main - INFO - 2 changes detected
+2026-03-10 21:29:49,183 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:49,588 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:49,994 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:50,396 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:50,801 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:51,208 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:51,574 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:51,981 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:52,396 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:52,803 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:53,209 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:53,612 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:54,016 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:54,422 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:54,826 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:55,232 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:55,636 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:56,042 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:56,444 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:56,847 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:57,253 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:57,657 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:58,062 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:58,467 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:58,871 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:59,275 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:29:59,681 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:00,084 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:00,491 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:00,894 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:01,248 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:01,608 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:01,966 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:02,326 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:02,683 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:03,044 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:03,450 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:03,866 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:04,272 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:04,679 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:05,084 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:05,488 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:05,892 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:06,297 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:06,703 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:07,108 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:07,516 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:07,920 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:08,324 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:08,729 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:09,134 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:09,542 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:09,946 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:10,351 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:10,756 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:11,161 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:11,566 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:11,972 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:12,377 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:12,782 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:13,191 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:13,594 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:13,999 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:14,405 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:14,810 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:15,216 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:15,622 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:16,027 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:16,431 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:16,836 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:17,241 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:17,645 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:18,051 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:18,456 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:18,862 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:19,269 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:19,675 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:20,079 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:20,484 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:20,892 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:21,297 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:21,703 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:22,107 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:22,511 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:22,919 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:23,323 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:23,729 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:24,097 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:24,507 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:24,912 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:25,318 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:25,723 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:26,130 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:26,534 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:26,941 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:27,348 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:27,752 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:28,156 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:28,561 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:28,966 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:29,370 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:29,773 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:30,177 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:30,582 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:30,999 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:31,403 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:31,810 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:32,214 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:32,619 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:33,036 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:33,444 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:33,848 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:34,252 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:34,655 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:35,062 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:35,469 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:35,872 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:36,276 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:36,680 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:37,084 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:37,488 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:37,894 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:38,298 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:38,702 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:39,109 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:39,511 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:39,917 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:40,324 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:40,729 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:41,133 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:41,549 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:41,957 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:42,363 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:42,766 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:43,173 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:43,579 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:43,982 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:44,349 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:44,758 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:45,213 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:45,581 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:45,991 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:46,398 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:46,800 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:47,205 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:47,613 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:48,019 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:48,436 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:48,844 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:49,249 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:49,653 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:50,011 - watchfiles.main - INFO - 1 change detected
+2026-03-10 21:30:50,418 - watchfiles.main - INFO - 1 change detected
