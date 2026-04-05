@@ -41,15 +41,23 @@ from fastapi.security import OAuth2PasswordBearer
 
 
 # Configure logging
-logging.basicConfig(
-    level=settings.log_level,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler(settings.log_file),
-        logging.StreamHandler()
-    ]
-)
+try:
+    log_dir = Path("logs")
+    log_dir.mkdir(exist_ok=True)
+    logging.basicConfig(
+        level=settings.log_level,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(settings.log_file) if settings.log_file else logging.NullHandler(),
+            logging.StreamHandler()
+        ]
+    )
+except Exception as e:
+    print(f"Logging setup failed, using basic config: {e}")
+    logging.basicConfig(level=logging.INFO)
+
 logger = logging.getLogger(__name__)
+logger.info(f"Starting Smart ATS from: {os.getcwd()}")
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -72,7 +80,10 @@ app.include_router(auth.router)
 
 # Static files directory
 STATIC_DIR = Path("frontend_v2/dist")
-STATIC_DIR.mkdir(parents=True, exist_ok=True)
+try:
+    STATIC_DIR.mkdir(parents=True, exist_ok=True)
+except Exception as e:
+    logger.warning(f"Could not create static directory: {e}")
 
 # Mount static files
 assets_dir = STATIC_DIR / "assets"
