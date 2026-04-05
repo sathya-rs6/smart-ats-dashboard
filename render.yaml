@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: smart-ats-dashboard
+    name: smart-ats
     env: python
-    buildCommand: "./start.sh"
+    plan: free
+    buildCommand: "./build.sh"
     startCommand: "python -m uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: PYTHON_VERSION
@@ -13,7 +14,3 @@ services:
         sync: false # User must enter this in Render dashboard
       - key: SECRET_KEY
         generateValue: true
-    disk:
-      name: ats-data
-      mountPath: /opt/render/project/src/data
-      sizeGB: 1
