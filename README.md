@@ -1,6 +1,6 @@
-# Resume Analyzer RAG 
+# Smart ATS Dashboard
 
-An intelligent Applicant Tracking System (ATS) and recruiter dashboard that automatically analyzes, scores, and ranks resumes against job descriptions using Retrieval-Augmented Generation (RAG).
+An intelligent, AI-powered Applicant Tracking System (ATS) and recruiter dashboard that automatically analyzes, scores, and ranks resumes against job descriptions using Retrieval-Augmented Generation (RAG).
 
 ## 🚀 Key Features
 - **Modern Recruiter Dashboard**: A rich, interactive React + Vite frontend (`frontend_v2`) designed for HR professionals, featuring analytics, split-screen candidate review, and global rankings.
@@ -13,7 +13,7 @@ An intelligent Applicant Tracking System (ATS) and recruiter dashboard that auto
 
 ## 📁 Project Structure
 ```text
-resume_analyzer_rag/
+smart_ats_dashboard/
 ├── backend/            # FastAPI Backend & LLM Logic
 │   ├── config/         # App settings (.env bindings)
 │   ├── core/           # Parser, Scorer, email services, RAG engine

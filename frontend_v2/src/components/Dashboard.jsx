@@ -136,11 +136,9 @@ export const Dashboard = ({ onOpenCreateModal, setActiveTab, searchQuery = '' })
     <div className="space-y-8 max-w-7xl mx-auto pb-20">
       {/* Header Section */}
       <div className="flex justify-between items-end mb-8">
-        <div>
-          <h2 className="text-3xl font-bold text-slate-900 mb-1">
-            Recruiter Dashboard
-          </h2>
-          <p className="text-slate-500">Manage your candidates and analyze resumes with AI.</p>
+        <div className="mb-10 animate-fade-in">
+          <h2 className="text-3xl font-bold font-['Outfit'] text-slate-900 tracking-tight">Smart Dashboard</h2>
+          <p className="text-slate-500 mt-2 font-medium">Welcome back! Here's an overview of the latest candidate intelligence.</p>
         </div>
         <div className="flex gap-4">
           <button 

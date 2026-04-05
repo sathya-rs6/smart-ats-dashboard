@@ -15,13 +15,16 @@ export const Layout = ({ children, activeTab, setActiveTab, searchQuery, setSear
     <div className="flex h-screen bg-slate-50 text-slate-800 overflow-hidden">
       {/* Sidebar */}
       <aside className="w-72 bg-white border-r border-slate-200 p-6 flex flex-col">
-        <div className="flex items-center gap-3 mb-10 px-2">
-          <div className="p-2 bg-white rounded-xl shadow-sm">
-            <Sparkles size={24} className="text-white" />
+        <div className="flex items-center gap-3 mb-10 px-2 animate-slide-in">
+          <div className="p-2.5 bg-slate-900 rounded-2xl shadow-lg ring-4 ring-slate-100 flex items-center justify-center">
+            <Sparkles size={22} className="text-white fill-white/20" />
           </div>
-          <h1 className="text-xl font-bold font-['Outfit'] bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent">
-            ResumeAI v2
-          </h1>
+          <div className="flex flex-col">
+            <h1 className="text-xl font-bold font-['Outfit'] tracking-tight bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 bg-clip-text text-transparent leading-none">
+              Smart ATS
+            </h1>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mt-1">Dashboard v2.0</span>
+          </div>
         </div>
 
         <nav className="flex-1 space-y-2">
