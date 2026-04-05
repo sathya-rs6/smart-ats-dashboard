@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: smart-ats-dashboard
+    env: python
+    buildCommand: "./start.sh"
+    startCommand: "python -m uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: DEFAULT_LLM_PROVIDER
+        value: groq
+      - key: GROQ_API_KEY
+        sync: false # User must enter this in Render dashboard
+      - key: SECRET_KEY
+        generateValue: true
+    disk:
+      name: ats-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
