@@ -35,9 +35,9 @@ try:
     from langchain_community.document_loaders import PyPDFLoader
     from langchain_text_splitters import RecursiveCharacterTextSplitter
     from langchain_huggingface.embeddings import HuggingFaceEmbeddings
-    from langchain.prompts import ChatPromptTemplate
-    from langchain.schema.runnable import RunnablePassthrough
-    from langchain.schema.output_parser import StrOutputParser
+    from langchain_core.prompts import ChatPromptTemplate
+    from langchain_core.runnables import RunnablePassthrough
+    from langchain_core.output_parsers import StrOutputParser
 
     # Vector stores
     if settings.vector_store_type == "weaviate":
@@ -72,23 +72,31 @@ except ImportError as e:
 class ResumeAnalyzer:
     """Main resume analyzer class with RAG capabilities"""
 
+    _embeddings_cache = None
+
     def __init__(self):
-        self.embeddings = None
         self.vector_store = None
         self.llm = None
         self.retriever = None
         self.chain = None
         self.docs = None  # Store processed documents
 
-        # Initialize components
-        self._initialize_embeddings()
+        # Initialize components (embeddings are lazy loaded)
         self._initialize_llm()
         self._initialize_vector_store()
+
+    @property
+    def embeddings(self):
+        """Lazy loader for embeddings model"""
+        if ResumeAnalyzer._embeddings_cache is None:
+            self._initialize_embeddings()
+        return ResumeAnalyzer._embeddings_cache
 
     def _initialize_embeddings(self):
         """Initialize the embedding model"""
         try:
-            self.embeddings = HuggingFaceEmbeddings(
+            logger.info("Initializing embeddings model (this may take a moment)...")
+            ResumeAnalyzer._embeddings_cache = HuggingFaceEmbeddings(
                 model_name="sentence-transformers/all-mpnet-base-v2"
             )
             logger.info("Embeddings model initialized successfully")
@@ -343,6 +351,59 @@ Answer:"""
 
         except Exception as e:
             logger.error(f"Failed to perform comprehensive analysis: {e}")
+            return {"error": str(e)}
+
+    def analyze_job_description(self, jd_text: str) -> Dict[str, Any]:
+        """Extract structured requirements from a job description text using LLM"""
+        import json
+        try:
+            logger.info("Extracting structured requirements from job description...")
+            
+            prompt_template = """You are an expert HR recruiter assistant. Extract structured requirements from the following job description.
+            
+            Return the result ONLY as a valid JSON object with the following keys.
+            Do not include markdown blocks, just the raw JSON.
+            
+            Keys:
+            - 'title': (string)
+            - 'required_skills': (list of strings)
+            - 'preferred_skills': (list of strings)
+            - 'required_experience': (float value in years)
+            - 'required_education': (list of strings like 'Bachelor', 'Master', etc.)
+            - 'required_certifications': (list of strings)
+            - 'key_responsibilities': (list of strings)
+            
+            Job Description:
+            {jd_text}
+            """
+            
+            prompt = prompt_template.format(jd_text=jd_text)
+            
+            # Using the existing LLM instance
+            if not self.llm:
+                self._initialize_llm()
+            
+            response = self.llm.invoke(prompt)
+            content = response.content
+            
+            # Clean up and parse JSON
+            cleaned_content = content.strip()
+            if cleaned_content.startswith("```json"):
+                cleaned_content = cleaned_content[7:]
+            elif cleaned_content.startswith("```"):
+                cleaned_content = cleaned_content[3:]
+            if cleaned_content.endswith("```"):
+                cleaned_content = cleaned_content[:-3]
+                
+            try:
+                structured_jd = json.loads(cleaned_content.strip())
+                return structured_jd
+            except json.JSONDecodeError:
+                logger.error("Failed to parse JD extraction JSON. Returning raw content.")
+                return {"error": "Failed to parse JSON", "raw": content}
+
+        except Exception as e:
+            logger.error(f"Error analyzing job description: {e}")
             return {"error": str(e)}
 
 

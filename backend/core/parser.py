@@ -31,13 +31,23 @@ class ResumeParser:
         self._initialize_nlp()
 
     def _initialize_nlp(self):
-        """Initialize spaCy NLP model"""
+        """Initialize spaCy NLP model and NLTK data"""
         try:
+            # Download necessary NLTK data
+            import nltk
+            for data in ['punkt', 'stopwords', 'averaged_perceptron_tagger']:
+                try:
+                    nltk.data.find(f'tokenizers/{data}' if data == 'punkt' else f'corpora/{data}')
+                except LookupError:
+                    nltk.download(data, quiet=True)
+            
             # Try to load spaCy model
             self.nlp = spacy.load("en_core_web_sm")
         except OSError:
             logger.warning("spaCy model not found. Run: python -m spacy download en_core_web_sm")
             self.nlp = None
+        except Exception as e:
+            logger.error(f"Error initializing NLP components: {e}")
 
     def parse_resume(self, file_path: str) -> Dict[str, Any]:
         """Parse resume based on file extension"""

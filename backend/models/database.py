@@ -17,6 +17,16 @@ logger = logging.getLogger(__name__)
 Base = declarative_base()
 
 # Database Models
+class User(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False)
+    email = Column(String, unique=True, index=True, nullable=False)
+    hashed_password = Column(String, nullable=False)
+    smtp_app_password = Column(String, nullable=True)
+    created_date = Column(DateTime, default=datetime.utcnow)
+
 class Resume(Base):
     __tablename__ = "resumes"
     
@@ -84,6 +94,21 @@ class ResumeAnalysis(Base):
 
 
 # Pydantic Models for API
+class UserCreate(BaseModel):
+    name: str = Field(..., min_length=2)
+    email: str
+    password: str = Field(..., min_length=4)
+    smtp_app_password: Optional[str] = None
+
+class UserResponse(BaseModel):
+    id: int
+    name: str
+    email: str
+    
+    class Config:
+        from_attributes = True
+
+
 class ResumeCreate(BaseModel):
     file_name: str
     file_path: str
@@ -149,7 +174,13 @@ class DatabaseManager:
             )
             
             # Create all tables
-            Base.metadata.create_all(bind=self.engine)
+            try:
+                Base.metadata.create_all(bind=self.engine)
+            except Exception as e:
+                logger.error(f"Error creating tables: {e}")
+                # In development, we might want to drop and recreate if schema changed
+                # However, for SQLite we can just advise deleting the file
+                raise
             
             # Create session maker
             self.SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=self.engine)
@@ -185,14 +216,7 @@ def init_database(database_url: str = None):
     SessionLocal = db_manager.init_db()
     return SessionLocal
 
-# Auto-initialize database when module is imported
-try:
-    if SessionLocal is None:
-        SessionLocal = init_database()
-        logger.info("Database auto-initialized successfully")
-except Exception as e:
-    logger.warning(f"Could not auto-initialize database: {e}")
-    SessionLocal = None
+# Database initialization should be called explicitly using init_database()
 
 
 # Dependency to get DB session

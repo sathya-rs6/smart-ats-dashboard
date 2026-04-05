@@ -53,6 +53,12 @@ class Settings(BaseSettings):
     port: int = 8000
     debug: bool = True
 
+    # SMTP Configuration
+    smtp_server: str = "smtp.gmail.com"
+    smtp_port: int = 587
+    smtp_username: Optional[str] = None
+    smtp_password: Optional[str] = None
+
     if PYDANTIC_V2:
         model_config = SettingsConfigDict(
             env_file=".env",

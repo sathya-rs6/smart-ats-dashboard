@@ -42,3 +42,10 @@ backend/uploads/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Frontend
+frontend_v2/node_modules/
+
+# Local Data
+logs/
+vector_stores/
