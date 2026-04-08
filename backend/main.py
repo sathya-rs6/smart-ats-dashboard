@@ -7,6 +7,7 @@ import sys
 import logging
 import uvicorn
 from fastapi import FastAPI, File, UploadFile, HTTPException, Depends, status, BackgroundTasks
+from contextlib import asynccontextmanager
 
 # Ensure the backend directory is in the path for local imports
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -59,11 +60,42 @@ except Exception as e:
 logger = logging.getLogger(__name__)
 logger.info(f"Starting Smart ATS from: {os.getcwd()}")
 
+# Global database variables
+SessionLocal = None
+db_manager = None
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Lifespan context manager for startup and shutdown events"""
+    global SessionLocal, db_manager
+    
+    # Initialize database
+    try:
+        logger.info("Initializing database connection...")
+        SessionLocal = init_database()
+        db_manager = DatabaseManager(settings.database_url)
+        logger.info("Database initialized successfully")
+    except Exception as e:
+        logger.error(f"Failed to initialize database: {e}")
+        # We don't exit here to allow the process to start and bind to the port
+        # Errors will be visible in the logs and first request to DB will fail
+    
+    # Create upload directories
+    try:
+        UPLOAD_DIR.mkdir(exist_ok=True)
+        RESUME_DIR.mkdir(exist_ok=True)
+    except Exception as e:
+        logger.error(f"Failed to create directories: {e}")
+
+    yield
+    # Shutdown logic can go here
+
 # Initialize FastAPI app
 app = FastAPI(
     title="Resume Analyzer RAG API",
     description="API for analyzing resumes using RAG (Retrieval-Augmented Generation)",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 # CORS middleware
@@ -114,19 +146,11 @@ async def serve_frontend():
         
     return {"message": "Frontend index.html not found", "docs": "/docs"}
 
-# Initialize database
-try:
-    SessionLocal = init_database()
-    db_manager = DatabaseManager(settings.database_url)
-except Exception as e:
-    logger.error(f"Failed to initialize database: {e}")
-    sys.exit(1)
-
 # Create upload directories
 UPLOAD_DIR = Path("uploads")
-UPLOAD_DIR.mkdir(exist_ok=True)
 RESUME_DIR = UPLOAD_DIR / "resumes"
-RESUME_DIR.mkdir(exist_ok=True)
+
+# Database initialization moved to lifespan
 
 # Upload directory is already handled above
 
@@ -151,6 +175,11 @@ class QuestionRequest(BaseModel):
 
 # Dependency to get DB session
 def get_db():
+    if SessionLocal is None:
+        raise HTTPException(
+            status_code=503, 
+            detail="Database not initialized. Please try again in a few seconds."
+        )
     db = SessionLocal()
     try:
         yield db
