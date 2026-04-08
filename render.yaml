@@ -15,3 +15,5 @@ services:
         sync: false # User must enter this in Render dashboard
       - key: SECRET_KEY
         generateValue: true
+      - key: HF_HOME
+        value: models/hf_cache

@@ -2,6 +2,10 @@
 # exit on error
 set -o errexit
 
+# Force HuggingFace cache to be in the project directory for persistence between build and runtime
+export HF_HOME=models/hf_cache
+export SENTENCE_TRANSFORMERS_HOME=models/hf_cache
+
 # Upgrade pip
 pip install --upgrade pip
 
@@ -12,12 +16,12 @@ pip install -r requirements.txt
 echo "Downloading spaCy model..."
 python -m spacy download en_core_web_sm
 
-# Pre-download Sentence Transformer model
-echo "Downloading Sentence Transformer model..."
-python -c "from langchain_huggingface.embeddings import HuggingFaceEmbeddings; HuggingFaceEmbeddings(model_name='sentence-transformers/all-mpnet-base-v2')"
+# Pre-download Sentence Transformer model (smaller version for 512MB RAM)
+echo "Downloading Sentence Transformer model (all-MiniLM-L6-v2)..."
+python -c "from langchain_huggingface.embeddings import HuggingFaceEmbeddings; HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2', cache_folder='models/hf_cache')"
 
 # Create necessary directories
-mkdir -p models
+mkdir -p models/hf_cache
 mkdir -p uploads/resumes
 mkdir -p logs
 mkdir -p vector_stores/chroma_db

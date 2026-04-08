@@ -97,7 +97,8 @@ class ResumeAnalyzer:
         try:
             logger.info("Initializing embeddings model (this may take a moment)...")
             ResumeAnalyzer._embeddings_cache = HuggingFaceEmbeddings(
-                model_name="sentence-transformers/all-mpnet-base-v2"
+                model_name="sentence-transformers/all-MiniLM-L6-v2",
+                cache_folder="models/hf_cache"
             )
             logger.info("Embeddings model initialized successfully")
         except Exception as e:
