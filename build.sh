@@ -16,6 +16,10 @@ pip install -r requirements.txt
 echo "Downloading spaCy model..."
 python -m spacy download en_core_web_sm
 
+# Download NLTK data
+echo "Downloading NLTK data..."
+python -m nltk.downloader punkt stopwords averaged_perceptron_tagger
+
 # Pre-download Sentence Transformer model (smaller version for 512MB RAM)
 echo "Downloading Sentence Transformer model (all-MiniLM-L6-v2)..."
 python -c "from langchain_huggingface.embeddings import HuggingFaceEmbeddings; HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2', cache_folder='models/hf_cache')"

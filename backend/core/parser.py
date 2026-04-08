@@ -33,13 +33,8 @@ class ResumeParser:
     def _initialize_nlp(self):
         """Initialize spaCy NLP model and NLTK data"""
         try:
-            # Download necessary NLTK data
-            import nltk
-            for data in ['punkt', 'stopwords', 'averaged_perceptron_tagger']:
-                try:
-                    nltk.data.find(f'tokenizers/{data}' if data == 'punkt' else f'corpora/{data}')
-                except LookupError:
-                    nltk.download(data, quiet=True)
+            # spaCy and NLTK data are now handled in build.sh for production
+            # We still keep the load for spaCy
             
             # Try to load spaCy model
             self.nlp = spacy.load("en_core_web_sm")

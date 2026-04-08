@@ -25,6 +25,7 @@ import shutil
 
 # Import local modules
 from config.settings import settings
+import models.database as db_mod
 from models.database import (
     init_database, Resume, JobDescription, ResumeAnalysis,
     ResumeCreate, JobDescriptionCreate, ResumeAnalysisCreate,
@@ -69,26 +70,33 @@ async def lifespan(app: FastAPI):
     """Lifespan context manager for startup and shutdown events"""
     global SessionLocal, db_manager
     
+    start_time = datetime.now()
+    logger.info(f">>> Application startup sequence initiated at {start_time}")
+    
     # Initialize database
     try:
-        logger.info("Initializing database connection...")
-        SessionLocal = init_database()
+        logger.info(">>> Initializing database connection...")
+        # Update both local and models.database globals
+        db_mod.SessionLocal = init_database()
+        SessionLocal = db_mod.SessionLocal
         db_manager = DatabaseManager(settings.database_url)
-        logger.info("Database initialized successfully")
+        logger.info(">>> Database initialized successfully")
     except Exception as e:
-        logger.error(f"Failed to initialize database: {e}")
-        # We don't exit here to allow the process to start and bind to the port
-        # Errors will be visible in the logs and first request to DB will fail
+        logger.error(f">>> Failed to initialize database: {e}")
     
     # Create upload directories
     try:
         UPLOAD_DIR.mkdir(exist_ok=True)
         RESUME_DIR.mkdir(exist_ok=True)
+        logger.info(">>> Directories verified")
     except Exception as e:
-        logger.error(f"Failed to create directories: {e}")
+        logger.error(f">>> Failed to create directories: {e}")
 
+    duration = (datetime.now() - start_time).total_seconds()
+    logger.info(f">>> Application startup complete. Duration: {duration:.2f} seconds")
+    
     yield
-    # Shutdown logic can go here
+    logger.info(">>> Application shutdown sequence initiated")
 
 # Initialize FastAPI app
 app = FastAPI(
